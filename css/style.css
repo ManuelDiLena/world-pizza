@@ -227,3 +227,106 @@ body {
 .products-container:hover .product-imagen img {
   transform: scale(1.15);
 }
+
+/* SERVICES SECTION */
+#services {
+  height: 100vh;
+  background-color: #FFF;
+  padding: 40px;
+}
+
+.titles-services {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.services-container {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto);
+  grid-gap: 30px;
+  grid-template-areas:    "ingredients imagen  speed"
+                          "quality     imagen  delivery";
+}
+
+.quality {
+  grid-row: quality;
+  grid-column: quality;
+}
+
+.ingredients {
+  grid-row: ingredients;
+  grid-column: ingredients;
+}
+
+.speed {
+  grid-row: speed;
+  grid-column: speed;
+}
+
+.delivery {
+  grid-row: delivery;
+  grid-column: delivery;
+}
+
+.central-image {
+  grid-row: imagen;
+  grid-column: imagen;
+  transition: all 0.5s;
+}
+
+.central-image:hover {
+  transform: scale(1.1);
+}
+
+.item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.item span {
+  width: 95px;
+  font-size: 40px;
+  color: var(--second-color);
+  padding: 20px;
+  border: 5px double #DEDEDE;
+  border-radius: 50%;
+  text-align: center;
+  transition: all 0.5s;
+}
+
+.item span:hover {
+  background-color: var(--second-color);
+  color: #FFF;
+}
+
+.ingredients span,
+.quality span {
+  color: var(--primary-color);
+}
+
+.ingredients span:hover,
+.quality span:hover {
+  background-color: var(--primary-color);
+  color: #FFF;
+}
+
+.item .item-title {
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.item .item-text {
+  font-size: 14px;
+  color: var(--text-color);
+  text-align: center;
+  font-style: italic;
+  padding: 0 20px;
+}
