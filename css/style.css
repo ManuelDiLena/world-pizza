@@ -1,0 +1,138 @@
+/* VARIABLES */
+:root {
+  --primary-color: #127C56;
+  --second-color: #EAB64D;
+  --shadow-background-color: #EAB64D30;
+  --background-color: #ECF3F6;
+  --text-color: #3D262A;
+}
+
+/* GENERAL */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Aboreto', cursive;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--background-color);
+}
+
+.title {
+  font-size: 40px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.subtitle {
+  font-size: 25px;
+  font-weight: 400;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--primary-color);
+}
+
+.btn {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #FFF;
+  background-color: var(--primary-color);
+  font-weight: 700;
+  padding: 15px 30px;
+  outline: none;
+  border: 2px solid var(--primary-color);
+  cursor: pointer;
+  position: relative;
+  top: 20px;
+  transition: all 0.3s;
+}
+
+.btn span {
+  padding-left: 10px;
+}
+
+.btn:hover {
+  padding: 15px 45px;
+}
+
+/* MAIN MENU */
+.main-menu {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 75px;
+  padding: 0 30px;
+  margin-top: 10px;
+  background-color: var(--background-color);
+  z-index: 1;
+}
+
+.logo img {
+  width: 130px;
+  cursor: pointer;
+}
+
+.bar-menu {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.bar-menu .links ul li {
+  display: inline-block;
+  padding: 0 10px;
+}
+
+.bar-menu .links ul li a {
+  font-size: 14px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 600;
+  background: linear-gradient(currentColor, currentColor);
+  background-position: 100% 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 2px;
+  transition: all 0.5s;
+}
+
+.bar-menu .links ul li a:hover {
+  color: var(--second-color);
+  background-size: 50% 2px;
+}
+
+.bar-menu .social a {
+  font-size: 16px;
+  text-transform: uppercase;
+  padding: 0 10px;
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--text-color);
+  transition: all 0.5s;
+}
+
+.bar-menu .social a:hover {
+  color: var(--second-color);
+}
+
+.main-menu i {
+  cursor: pointer;
+  color: var(--text-color);
+  font-size: 30px;
+  float: right;
+  display: none;
+  transition: all 0.5s;
+}
+
+.main-menu i:hover {
+  color: var(--second-color);
+}
