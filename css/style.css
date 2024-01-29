@@ -553,3 +553,296 @@ body {
 .btn-input:hover {
   padding: 15px 65px;
 }
+
+/* ALERTS */
+.alerts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.alert {
+  width: 60%;
+  padding: 20px 60px;
+  position: fixed;
+  top: 0;
+  transition: all 0.5s;
+}
+
+.alert.show {
+  transform: translateY(50%);
+}
+
+.alert.hide {
+  transform: translateY(-100%);
+}
+
+.alert .icono-alert {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 30px;
+}
+
+.alert .msg {
+  padding: 0 20px;
+  font-size: 18px;
+}
+
+#alertError {
+  background-color: #f8d7da;
+  border-right: 4px solid #da3748;
+}
+
+#alertError .icono-alert {
+  color: #da3748;
+}
+
+#alertError .msg {
+  color: #721c24;
+}
+
+#alertSuccess {
+  background-color: #d4edda;
+  border-right: 4px solid #279e43;
+}
+
+#alertSuccess .icono-alert {
+  color: #279e43;
+}
+
+#alertSuccess .msg {
+  color: #155724;
+}
+
+/* FOOTER */
+footer {
+  display: flex;
+  margin-top: -100px;
+}
+
+.social-method {
+  width: 25%;
+  height: 100px;
+  background-color: #333;
+  color: #FFF;
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+}
+
+.social-method i {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 30px;
+  line-height: 100px;
+  transition: all 0.5s;
+}
+
+.social-method span {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  padding: 10px 0;
+  font-size: 12px;
+  background-color: var(--primary-color);
+  color: #FFF;
+  letter-spacing: 1px;
+  font-weight: 700;
+  transform: translateY(60px);
+  transition: all 0.5s;
+}
+
+.social-method i:hover + span {
+  transform: translateY(0px);
+}
+
+.social-method i:hover {
+  transform: translateY(-20px);
+}
+
+/* BTN TOP */
+#btnTop {
+  width: 50px;
+  height: 50px;
+  background-color: var(--primary-color);
+  cursor: pointer;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1;
+  transform: translateY(200%);
+  transition: all 0.5s;
+}
+
+#btnTop.show {
+  transform: translateY(0);
+}
+
+#btnTop.scroll-final {
+  transform: translateY(-225%);
+}
+
+#btnTop span {
+  color: #FFF;
+  font-size: 25px;
+  width: 100%;
+  text-align: center;
+  line-height: 50px;
+  transition: all 0.5s;
+}
+
+#btnTop:hover {
+  background-color: #0c553a;
+}
+
+#btnTop:hover span {
+  transform: translateY(-3px);
+}
+
+
+/* MEDIA QUERYS */
+@media screen and (max-width: 850px) {
+  /* PRODUCTS SLIDER */
+  .container {
+      flex-direction: column;
+  }
+
+  .product-description {
+      width: 70%;
+      order: 1;
+  }
+
+  .product-description .btn {
+      padding: 10px 20px;
+  }
+
+  .product-description .btn:hover {
+      padding: 10px 30px;
+  }
+
+  /* SERVICES SECTION */
+  .services-container {
+      margin-top: 50px;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-areas:    "ingredients    speed"
+                              "quality        delivery";
+  }
+
+  .central-image {
+      display: none;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  /* MAIN MENU */
+  .main-menu {
+      position: fixed;
+      top: 0;
+      margin-top: 0;
+  }
+
+  .main-menu i {
+      display: block;
+  }
+
+  .bar-menu {
+      justify-content: space-around;
+      align-items: center;
+      flex-direction: column;
+      width: 100%;
+      height: 100vh;
+      position: fixed;
+      right: 0;
+      top: 0;
+      z-index: 1000;
+      background: #333;
+      transition: all 1s;
+      transform: translateX(100%);
+  }
+
+  .bar-menu.active{
+      transform: translateX(0%);
+  }
+
+  .bar-menu i {
+      position: absolute;
+      right: 50px;
+      top: 50px;
+  }
+
+  .bar-menu .links ul li {
+      display: block;
+      padding: 20px 10px;
+      text-align: center;
+  }
+
+  .bar-menu .links ul li a,
+  .bar-menu .social a {
+      font-size: 20px;
+  }
+
+  /* PRODUCTS SLIDER */
+  .slider {
+      height: calc(100vh - 0px);
+  }
+
+  .product-imagen {
+      width: 65%;
+  }
+
+  .product-description h1 {
+      font-size: 7vw;
+  }
+
+  .product-description h2 {
+      font-size: 3vw;
+  }
+
+  /* INGREDIENTS */
+  .ingre-info .ingre-text {
+      display: none;
+  }
+
+  /* CONTACT */
+  #form {
+      width: 100%;
+  }
+
+  .two-fiels {
+      flex-direction: column;
+  }
+
+  .inputConIcon {
+      width: 100%;
+  }
+
+  /* ALERTS */
+  .alert {
+      width: 100%;
+  }
+
+  .alert.show {
+      transform: translateY(150%);
+  }
+
+  /* FOOTER */
+  footer {
+      flex-wrap: wrap;
+      margin-top: 0px;
+  }
+
+  .social-method {
+      width: 50%;
+  }
+
+  /* BTN TOP */
+  #btnTop {
+      display: none;
+  }
+}
