@@ -72,3 +72,39 @@ function validation(e) {
 
 // Form events
 form.addEventListener('submit', validation);
+
+// BTN SCROLL TOP
+let btnTop = document.getElementById('btnTop'),
+    logo = document.getElementById('logo');
+
+// Detect scroll on the page
+window.addEventListener('scroll', function() {
+  let scroll = document.documentElement.scrollTop,
+      fullSize = document.documentElement.offsetHeight,
+      sizeVP = document.documentElement.clientHeight;
+
+  if (scroll > 100) {
+    btnTop.classList.add('show');
+
+  } else {
+    btnTop.classList.remove('show');
+  }
+
+  // Modify button when reaching the bottom of the page
+  if (fullSize == (scroll + sizeVP)) {
+    btnTop.classList.add('scroll-final');
+
+  } else {
+    btnTop.classList.remove('scroll-final');
+  }
+});
+
+// Detect btn click event
+btnTop.addEventListener('click', function() {
+  window.scrollTo(0,0);
+});
+
+// Detect logo click event
+logo.addEventListener('click', function() {
+  window.scrollTo(0,0);
+});
