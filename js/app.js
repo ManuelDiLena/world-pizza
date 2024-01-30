@@ -19,3 +19,18 @@ let btnMenuOpen = document.getElementById('btnMenuOpen');
       menuResponsive.style.transitionDelay = '0.5s';
       menuResponsive.classList.remove('active');
     });
+
+// PRODUCTS SLIDER
+let container = document.querySelector('.slider');
+    btnLeft = document.getElementById('btnLeft');
+    btnRight = document.getElementById('btnRight');
+
+    // Right btn event
+    btnRight.addEventListener('click', function() {
+      container.scrollLeft += container.offsetWidth;
+    });
+
+    // Left btn event
+    btnLeft.addEventListener('click', function() {
+      container.scrollLeft -= container.offsetWidth;
+    });
