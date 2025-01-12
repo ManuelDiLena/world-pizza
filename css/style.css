@@ -34,7 +34,7 @@ body {
 }
 
 .subtitle {
-  color: var(--primary-color);
+  color: var(--secondary-color);
   font-size: 25px;
   font-weight: 400;
   text-align: center;
@@ -230,6 +230,109 @@ body {
   transform: scale(1.15);
 }
 
+/* SERVICES SECTION */
+#services {
+  background-color: #FFF;
+  height: 100vh;
+  padding: 40px;
+}
+
+.titles-services {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.services-container {
+  display: grid;
+  margin-top: 30px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto);
+  grid-gap: 30px;
+  grid-template-areas:    "ingredients imagen  speed"
+                          "quality     imagen  delivery";
+}
+
+.quality {
+  grid-column: quality;
+  grid-row: quality;
+}
+
+.ingredients {
+  grid-column: ingredients;
+  grid-row: ingredients;
+}
+
+.speed {
+  grid-column: speed;
+  grid-row: speed;
+}
+
+.delivery {
+  grid-column: delivery;
+  grid-row: delivery;
+}
+
+.central-image {
+  grid-column: imagen;
+  grid-row: imagen;
+  transition: all 0.5s;
+}
+
+.central-image:hover {
+  transform: scale(1.1);
+}
+
+.item {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.item span {
+  border: 5px double #DEDEDE;
+  border-radius: 50%;
+  color: var(--secondary-color);
+  font-size: 40px;
+  padding: 20px;
+  text-align: center;
+  transition: all 0.5s;
+  width: 95px;
+}
+
+.item span:hover {
+  background-color: var(--secondary-color);
+  color: #FFF;
+}
+
+.ingredients span,
+.quality span {
+  color: var(--primary-color);
+}
+
+.ingredients span:hover,
+.quality span:hover {
+  background-color: var(--primary-color);
+  color: #FFF;
+}
+
+.item .item-title {
+  font-size: 15px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.item .item-text {
+  color: var(--text-color);
+  font-size: 14px;
+  font-style: italic;
+  padding: 0 20px;
+  text-align: center;
+}
+
 
 /* MEDIA QUERYS */
 @media screen and (max-width: 850px) {
@@ -249,6 +352,18 @@ body {
 
   .product-description .btn:hover {
     padding: 10px 30px;
+  }
+
+  /* SERVICES SECTION */
+  .services-container {
+    margin-top: 50px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:    "ingredients    speed"
+                            "quality        delivery";
+  }
+
+  .central-image {
+    display: none;
   }
 }
 

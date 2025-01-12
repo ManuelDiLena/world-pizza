@@ -2,7 +2,7 @@
 let btnMenuOpen = document.getElementById('btnMenuOpen'),
     btnMenuClose = document.getElementById('btnMenuClose'),
     menuResponsive = document.getElementById('barMenu'),
-    links = document.getElementsById('links');
+    links = document.getElementById('links');
 
   // click open
   btnMenuOpen.addEventListener('click', function() {
