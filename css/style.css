@@ -462,6 +462,100 @@ body {
   transform: translateY(10px);
 }
 
+/* CONTACT SECTION */
+#contact {
+  height: 100vh;
+  padding: 60px;
+  position: relative;
+}
+
+#form {
+  margin: 30px auto;
+  width: 70%;
+}
+
+.two-fields {
+  display: flex;
+  justify-content: space-between;
+}
+
+.input-text, .input-email, .textarea {
+  background-color: #FFF;
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+  font-size: 16px;
+  height: 45px;
+  margin-bottom: 20px;
+  outline: none;
+  padding: 15px 60px;
+  transition: all 0.5s;
+}
+
+.textarea {
+  height: 150px;
+  resize: none;
+  width: 100%;
+}
+
+.input-text, .input-email {
+  width: 100%;
+}
+
+.inputConIcon {
+  position: relative;
+  width: 48%;
+}
+
+.inputConIcon i {
+  background-color: var(--primary-color);
+  color: #FFF;
+  left: 0;
+  padding: 14px 15px;
+  position: absolute;
+  transition: all 0.5s;
+}
+
+.textareaIcon {
+  width: 100%;
+}
+
+.textareaIcon i {
+  background-color: transparent;
+  color: var(--primary-color);
+  font-size: 25px;
+  left: 17px;
+  padding: 0;
+  top: 13px;
+  transition: all 0.5s;
+}
+
+.inputConIcon input:focus,
+.inputConIcon textarea:focus {
+  border: 1px solid var(--secondary-color);
+}
+
+.inputConIcon input:focus + i {
+  background-color: var(--secondary-color);
+}
+
+.inputConIcon textarea:focus + i {
+  color: var(--secondary-color);
+}
+
+.fields-btn {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.btn-input {
+  padding: 15px 50px;
+}
+
+.btn-input:hover {
+  padding: 15px 65px;
+}
+
 
 /* MEDIA QUERYS */
 @media screen and (max-width: 850px) {
@@ -559,5 +653,23 @@ body {
 
   .product-description h2 {
     font-size: 3vw;
+  }
+
+  /* INGREDIENTS SECTION */
+  .ingre-info, .ingre-text {
+    display: none;
+  }
+
+  /* CONTACT SECTION */
+  #form {
+    width: 100%;
+  }
+
+  .two-fields {
+    flex-direction: column;
+  }
+
+  .inputConIcon {
+    width: 100%;
   }
 }
