@@ -618,6 +618,95 @@ body {
   color: #155724;
 }
 
+/* FOOTER */
+footer {
+  display: flex;
+  margin-top: -100px;
+}
+
+.social-method {
+  background-color: #333;
+  color: #FFF;
+  height: 100px;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  width: 25%;
+}
+
+.social-method i {
+  font-size: 30px;
+  height: 100%;
+  left: 0;
+  line-height: 100px;
+  position: absolute;
+  top: 0;
+  transition: all 0.5s;
+  width: 100%;
+}
+
+.social-method span {
+  background-color: var(--secondary-color);
+  bottom: 0;
+  color: var(--primary-color);
+  font-size: 12px;
+  font-weight: 700;
+  left: 0;
+  letter-spacing: 1px;
+  padding: 10px 0;
+  position: absolute;
+  transform: translateY(60px);
+  transition: all 0.5s;
+  width: 100%;
+}
+
+.social-method i:hover + span {
+  transform: translateY(0px);
+}
+
+.social-method i:hover {
+  transform: translateY(-20px);
+}
+
+/* BTN TOP */
+#btnTop {
+  background-color: var(--primary-color);
+  bottom: 20px;
+  cursor: pointer;
+  height: 50px;
+  position: fixed;
+  right: 20px;
+  transform: translateY(200%);
+  transition: all 0.5s;
+  width: 50px;
+  z-index: 1;
+}
+
+#btnTop.show {
+  transform: translateY(0);
+}
+
+#btnTop.scroll-final {
+  transform: translateY(-185%);
+}
+
+#btnTop span {
+  color: #FFF;
+  font-size: 25px;
+  line-height: 50px;
+  text-align: center;
+  transition: all 0.5s;
+  width: 100%;
+}
+
+#btnTop:hover {
+  background-color: #1F1E38;
+}
+
+#btnTop:hover span {
+  transform: translateY(-3px);
+}
+
 
 /* MEDIA QUERYS */
 @media screen and (max-width: 850px) {
@@ -733,5 +822,29 @@ body {
 
   .inputConIcon {
     width: 100%;
+  }
+
+  /* ALERTS */
+  .alert {
+    width: 100%;
+  }
+
+  .alert.show {
+    transform: translateY(150%);
+  } 
+
+  /* FOOTER */
+  footer {
+    flex-wrap: wrap;
+    margin-top: 0px;
+  }
+
+  .social-method {
+    width: 50%;
+  }
+
+  /* BTN TOP */
+  #btnTop {
+    display: none;
   }
 }
